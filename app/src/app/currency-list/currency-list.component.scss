@@ -1,0 +1,57 @@
+.container-list{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #f2f2f2;
+    overflow-y: auto;
+}
+
+.currency-list{
+    height: 50px;
+    width: fit-content;
+   
+    color:#131722;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .item{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        img{
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+
+        }
+
+        title{
+            font-weight: bold;
+        }
+        .value {
+            margin: 0px 5px;
+        }
+
+        .pct-positive{
+            color: #01a920;
+        }
+
+        .pct-negative{
+            color: #CC3232;
+        }
+    }
+}
+
+.divisor{
+    width: 1px;
+    height: 50%;
+    background-color: #131722;
+    opacity: 0.4;
+    margin: 0px 20px;
+}
+
+

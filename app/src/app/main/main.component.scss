@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    padding: 0px;
+
+html{
+    padding: 0;
     margin: 0px;
+}
+* {
+    
     font-family: "Montserrat", sans-serif;
     outline: 0;
     box-sizing: border-box;
@@ -172,6 +176,10 @@ input, select {
     border-collapse: collapse;
 }
 
+.transaction-list tbody tr{
+  border-bottom: 1px solid #f2f2f2;
+}
+
 .transaction-list th, .transaction-list td {
     text-align: center;
     padding: 8px;
@@ -194,14 +202,16 @@ input, select {
     color: #CC3232
 }
 
-.transaction-list button {
+.transaction-list .icon-action{
     border: none;
-    border-radius: 22x;
-    margin-right: 5px;
-    padding: 5px 10px;
-    background-color: #015CA9;
-    color: white;
+    width: 28px;
+    height: 28px;
+    margin:  0px 2.5px;
     cursor: pointer;
+}
+
+.transaction-list .icon-action:hover{
+  opacity: 0.9;
 }
 
 .transaction-list button:hover{

@@ -1,0 +1,36 @@
+<div class="container-list">
+
+    <div class="currency-list">
+        <div class="item">
+            <img src="/assets/estados-unidos.png" alt="eua">
+            <strong class="title">{{currencies?.USDBRL.name.split('/')[0]}}</strong>
+            <span class="value">{{currencies?.USDBRL.high | currency: 'BRL'}}</span>
+            <span [ngClass]="{'pct-positive': currencies?.USDBRL.pctChange > 0, 'pct-negative': currencies?.USDBRL.pctChange <= 0}">
+                ({{currencies?.USDBRL.pctChange}})
+            </span>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="item">
+            <img src="/assets/euros.png" alt="euro">
+            <strong class="title">{{currencies?.EURBRL.name.split('/')[0]}}</strong>
+            <span class="value">{{currencies?.EURBRL.high | currency: 'BRL'}}</span>
+            <span [ngClass]="{'pct-positive': currencies?.EURBRL.pctChange > 0, 'pct-negative': currencies?.EURBRL.pctChange <= 0}">
+                ({{currencies?.EURBRL.pctChange}})
+            </span>
+    </div>
+
+    <div class="divisor"></div>
+
+        <div class="item">
+            <img src="/assets/bitcoin.png" alt="bitcoin">
+            <strong class="title">{{currencies?.BTCBRL.name.split('/')[0]}}</strong>
+            <span class="value">{{currencies?.BTCBRL.high | currency: 'BRL'}}</span>
+            <span [ngClass]="{'pct-positive': currencies?.BTCBRL.pctChange > 0, 'pct-negative': currencies?.BTCBRL.pctChange <= 0}">
+                ({{currencies?.BTCBRL.pctChange}})
+            </span>
+        </div>
+    </div>
+
+</div>

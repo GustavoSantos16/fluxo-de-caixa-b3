@@ -2,7 +2,8 @@
   <header class="header">
     Fluxo de Caixa
   </header>
-  
+
+  <app-currency-list></app-currency-list>
   
   
   <div class="totals">
@@ -86,8 +87,8 @@
           <td>{{ transaction.description }}</td>
           <td>{{ transaction.date | date: 'dd/MM/yyyy' }}</td>
           <td>
-            <button (click)="editTransaction(i)">Editar</button>
-            <button (click)="deleteTransaction(i)">Excluir</button>
+            <img class="icon-action" src="/assets/update.png" (click)="editTransaction(i)" title="Editar">
+            <img class="icon-action" src="/assets/delete.png" (click)="deleteTransaction(i)" title="Excluir">
           </td>
         </tr>
       </tbody>
