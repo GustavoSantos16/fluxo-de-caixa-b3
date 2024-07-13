@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+//TODO: ADICIONAR FONT NO PROJETO
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    outline: 0;
+}
+
+ .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .header, .footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #015CA9;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .filter {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-direction: column;
+
+    .content-filter{
+      button{
+        border: none;
+        width: 40px;
+        height: 40px;
+        background-color: #015CA9;
+        color: #fff;
+        border-radius: 12px;
+        margin: 0px 10px;
+        cursor: pointer;
+      }
+
+      button:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  .totals {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    
+  }
+
+  .card-total{
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px 20px;
+
+    overflow-x: hidden;
+    display:flex;
+    flex-direction: column;
+
+    span{
+      font-size: 12px;
+    }
+
+    .strong{
+      margin-top: 20px;
+      font-size: 22px;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+
+  }
+  
+  .entradas {
+    color: blue;
+    color: #131316;
+  }
+  
+  .saidas {
+    color: red;
+    color: #131316;
+  }
+  
+  .form {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 10px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .field{
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      margin: 15px;
+      width: 120px;
+      height: auto;
+      
+      label{
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+    }
+
+    .field-3{
+      width: 30%;
+    }
+
+    input, select{
+      border-style: none;
+      height: 45px;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0px 10px;
+    }
+  }
+
+  .save-btn{
+    border: none;
+    width: 100px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: #015CA9;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 22px;
+  }
+
+  .save-btn:hover{
+    opacity: 0.8;
+  }
+  
+  .transaction-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transaction-list th, .transaction-list td {
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    
+  }
+
+  .type-icon{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    margin: auto;
+    width: 100px;
+    height: 100%;
+    text-transform: capitalize;
+
+    img{
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .transaction-list{
+    height: 450px;
+    margin-bottom: 60px;
+  }
+  .transaction-list tbody tr{
+    border-bottom: 1px solid #ddd;
+    height: 60px;
+  }
+  
+  .transaction-list th {
+    background-color: #f2f2f2;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #131316;
+    font-weight: normal;
+  }
+  
+  .transaction-list td.entrada {
+    color: blue;
+  }
+  
+  .transaction-list td.saida {
+    color: red;
+  }
+  
+  .transaction-list button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .transaction-list button:hover {
+    background-color: #0056b3;
+  }
+  
+  .transaction-list button:active {
+    background-color: #004494;
+  }
+  

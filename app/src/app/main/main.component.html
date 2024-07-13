@@ -1,0 +1,100 @@
+<div class="container">
+  <header class="header">
+    Fluxo de Caixa
+  </header>
+  
+  
+  
+  <div class="totals">
+    <div class="filter">
+      <label>Mês Atual</label>
+      <div class="content-filter">
+        <button (click)="previousMonth()">&#8592;</button>
+          <span>{{ currentMonth | date: 'MMMM/yyyy' }}</span>
+        <button (click)="nextMonth()">&#8594;</button>
+      </div>
+     
+    </div>
+    <div class="cards">
+      <div class="card-total">
+        <span>Entradas:</span> 
+        <div class="entradas strong">{{ totalEntradas | currency: 'BRL' }}</div>
+        <div class="dollar-cotation"></div>
+      </div>
+      <div class="card-total">
+        <span>Saídas:</span>
+        <div class="saidas strong">{{ totalSaidas | currency: 'BRL' }}</div>
+      </div>
+      <div class="card-total">
+        <span>Total:</span>
+        <div class="strong">{{ total | currency: 'BRL' }}</div>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="form">
+    <div class="field field-3">
+      <label for="description">Descrição:</label>
+      <input [(ngModel)]="description" placeholder="Descrição" id="description" maxlength="30" />
+    </div>
+    <div class="field field">
+      <label for="valor">Valor:</label>
+      <input [(ngModel)]="value" type="number" placeholder="Valor" id="valor" />
+    </div>
+    <div class="field">
+      <label for="date">Data:</label>
+      <input [(ngModel)]="date" type="date" placeholder="Data" id="date" />
+    </div>
+    <div class="field">
+      <label for="type">Tipo:</label>
+      <select [(ngModel)]="type" id="type">
+        <option value="entrada">Entrada</option>
+        <option value="saida">Saída</option>
+      </select>
+    </div>
+
+    <button (click)="addTransaction()" class="save-btn">Salvar</button>
+  </div>
+  
+  <div class="transaction-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Valor</th>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of filteredTransactions; let i = index">
+          <td >
+            <div class="type-icon" *ngIf="transaction.type == 'entrada'">
+              <img src="/assets/arrow-down.png">
+              {{ transaction.type }}
+            </div>
+
+            <div class="type-icon" *ngIf="transaction.type == 'saida'">
+              <img src="/assets/arrow-up.png">
+              {{ transaction.type }}
+            </div>
+            
+          </td>
+          <td [class]="transaction.type">{{ transaction.value | currency: 'BRL' }}</td>
+          <td>{{ transaction.description }}</td>
+          <td>{{ transaction.date | date: 'dd/MM/yyyy' }}</td>
+          <td>
+            <button (click)="editTransaction(i)">Editar</button>
+            <button (click)="deleteTransaction(i)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <footer class="footer">
+    Criado por: Gustavo Santos
+  </footer>
+</div>
