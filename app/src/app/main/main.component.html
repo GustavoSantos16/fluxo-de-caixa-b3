@@ -55,7 +55,7 @@
       </select>
     </div>
 
-    <button (click)="addTransaction()" class="save-btn">Salvar</button>
+    <button (click)="addTransaction()" class="save-btn" [disabled]="validateForm">Salvar</button>
   </div>
   
   <div class="transaction-list">

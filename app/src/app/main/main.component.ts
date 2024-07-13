@@ -113,4 +113,12 @@ export class MainComponent implements OnInit {
       this.transactions = JSON.parse(savedTransactions);
     }
   }
+
+  get validateForm(){
+    if(this.description == "" || this.value == 0 || this.type == null || this.date == null ){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }

@@ -14,9 +14,7 @@ export class CurrencyListComponent implements OnInit {
   ngOnInit(): void {
     this.currenciesService.getCurrencies('USD-BRL,EUR-BRL,BTC-BRL').subscribe(
       data => {
-        this.currencies = data;
-        console.log(this.currencies);
-        
+        this.currencies = data;        
       },
       error => {
         console.error('Erro ao buscar cotações', error);
