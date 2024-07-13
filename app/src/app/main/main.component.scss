@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-//TODO: ADICIONAR FONT NO PROJETO
-*{
+
+* {
     padding: 0px;
     margin: 0px;
     font-family: "Montserrat", sans-serif;
     outline: 0;
+    box-sizing: border-box;
 }
 
- .container {
-    max-width: 100%;
+.container {
+    width: 100%;
     margin: 0 auto;
-  }
-  
-  .header, .footer {
+}
+
+.header, .footer {
     width: 100%;
     height: 50px;
     line-height: 50px;
@@ -20,131 +21,131 @@
     color: white;
     text-align: center;
     font-size: 16px;
-  }
+}
 
-  .footer{
+.footer {
     position: fixed;
     bottom: 0px;
     left: 0px;
-  }
-  
-  .filter {
+}
+
+.filter {
     display: flex;
     justify-content: center;
     margin: 20px 0;
     flex-direction: column;
+}
 
-    .content-filter{
-      button{
-        border: none;
-        width: 40px;
-        height: 40px;
-        background-color: #015CA9;
-        color: #fff;
-        border-radius: 12px;
-        margin: 0px 10px;
-        cursor: pointer;
-      }
+.filter .content-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-      button:hover{
-        opacity: 0.8;
-      }
-    }
-  }
-  
-  .totals {
+.filter .content-filter button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: #015CA9;
+    color: #fff;
+    border-radius: 12px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.filter .content-filter button:hover {
+    opacity: 0.9;
+}
+
+.totals {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 20px 0;
-  }
+}
 
-  .cards{
+.cards {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-    
-  }
+}
 
-  .card-total{
-    width: 200px;
+.card-total {
+    min-width: 200px;
+    width: auto;
+    max-width: 300px;
     height: 100px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 10px 20px;
-
     overflow-x: hidden;
-    display:flex;
+    display: flex;
     flex-direction: column;
+}
 
-    span{
-      font-size: 12px;
-    }
+.card-total span {
+    font-size: 12px;
+}
 
-    .strong{
-      margin-top: 20px;
-      font-size: 22px;
-      width: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-weight: bold;
-    }
-
-  }
-  
-  .entradas {
-    color: blue;
-    color: #131316;
-  }
-  
-  .saidas {
-    color: red;
-    color: #131316;
-  }
-  
-  .form {
+.card-total .strong {
+    margin-top: 14px;
+    font-size: 22px;
     width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.entradas {
+    color: #015CA9;
+}
+
+.saidas {
+    color: #CC3232;
+}
+
+.form {
+    width: 100%;
+    height: auto;
     background-color: #f0f0f0;
     padding: 20px 10px;
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-    display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.field {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin: 15px;
+    width: 150px;
+    height: auto;
+}
 
-    .field{
-      display: flex;
-      align-items: start;
-      flex-direction: column;
-      margin: 15px;
-      width: 120px;
-      height: auto;
-      
-      label{
-        margin-bottom: 8px;
-        font-size: 14px;
-      }
-    }
+.field label {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
 
-    .field-3{
-      width: 30%;
-    }
+.field-3 {
+    width: 30%;
+}
 
-    input, select{
-      border-style: none;
-      height: 45px;
-      border-radius: 5px;
-      width: 100%;
-      padding: 0px 10px;
-    }
-  }
+input, select {
+    background-color: white;
+    border-style: none;
+    height: 45px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0px 10px;
+}
 
-  .save-btn{
+.save-btn {
     border: none;
     width: 100px;
     height: 45px;
@@ -153,78 +154,130 @@
     color: #fff;
     cursor: pointer;
     margin-top: 22px;
-  }
+}
 
-  .save-btn:hover{
-    opacity: 0.8;
-  }
-  
-  .transaction-list table {
+.save-btn:hover {
+    opacity: 0.9;
+}
+
+.transaction-list {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.transaction-list table {
     width: 100%;
     border-collapse: collapse;
-  }
-  
-  .transaction-list th, .transaction-list td {
+}
+
+.transaction-list th, .transaction-list td {
     text-align: center;
     padding: 8px;
     font-size: 14px;
-    
-  }
+}
 
-  .type-icon{
-    display: flex;
-    align-items: center;
-    // justify-content: center;
-    margin: auto;
-    width: 100px;
-    height: 100%;
-    text-transform: capitalize;
-
-    img{
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  .transaction-list{
-    height: 450px;
-    margin-bottom: 60px;
-  }
-  .transaction-list tbody tr{
-    border-bottom: 1px solid #ddd;
-    height: 60px;
-  }
-  
-  .transaction-list th {
+.transaction-list th {
     background-color: #f2f2f2;
     font-size: 14px;
     text-transform: uppercase;
     color: #131316;
     font-weight: normal;
-  }
-  
-  .transaction-list td.entrada {
-    color: blue;
-  }
-  
-  .transaction-list td.saida {
-    color: red;
-  }
-  
-  .transaction-list button {
+}
+
+.transaction-list td.entrada {
+    color: #015CA9;
+}
+
+.transaction-list td.saida {
+    color: #CC3232
+}
+
+.transaction-list button {
+    border: none;
+    border-radius: 22x;
     margin-right: 5px;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #015CA9;
     color: white;
-    border: none;
     cursor: pointer;
-  }
-  
-  .transaction-list button:hover {
+}
+
+.transaction-list button:hover{
+  opacity: 0.9;
+}
+
+.transaction-list button:hover {
     background-color: #0056b3;
-  }
-  
-  .transaction-list button:active {
+}
+
+.transaction-list button:active {
     background-color: #004494;
+}
+
+.type-icon {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100px;
+    height: 100%;
+    text-transform: capitalize;
+}
+
+.type-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 768px) {
+  .header, footer{
+    width: 100%;
   }
-  
+    .totals {
+      width: 100%;
+        flex-direction: column;
+    }
+
+    .cards {
+      width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-total{
+      width: 80%;
+    }
+
+    .filter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form {
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+
+        input, select{
+          width: 100%;
+        }
+    }
+
+    .field {
+        width: 80%;
+    }
+
+    .field-3 {
+        width: 80%;
+    }
+
+    .transaction-list {
+        font-size: 12px;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .transaction-list table{
+      width: 100%;
+    }
+}
