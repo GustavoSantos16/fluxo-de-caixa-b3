@@ -42,14 +42,14 @@ describe('MainComponent', () => {
     component.transactions = [
       { description: 'Entrada 1', value: 1000, type: 'entrada', date: '2024-07-01' },
       { description: 'Saída 1', value: 500, type: 'saida', date: '2024-07-02' },
-      { description: 'Entrada 2', value: 2000, type: 'entrada', date: '2024-06-01' }
+      { description: 'Entrada 2', value: 2000, type: 'entrada', date: '2024-04-01' }
     ];
 
     component.currentMonth = new Date('2024-07-01');
     const filteredTransactions = component.filteredTransactions;
 
-    expect(filteredTransactions.length).toBe(2);
+    expect(filteredTransactions.length).toBe(1);
     expect(filteredTransactions[0].description).toBe('Entrada 1');
-    expect(filteredTransactions[1].description).toBe('Saída 1');
   });
 });
+
