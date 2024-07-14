@@ -1,6 +1,6 @@
 # Fluxo de Caixa
 
-Este é um aplicativo de fluxo de caixa simples desenvolvido com Angular 12. Ele permite o registro de entradas e saídas financeiras, filtragem por mês/ano, integração com APIs externas para cotação do dólar, responsividade e funcionalidades CRUD.
+Este é um aplicativo de fluxo de caixa simples desenvolvido com Angular 12. Ele permite o registro de entradas e saídas financeiras, filtragem por mês/ano, integração com APIs externas para cotação do dólar, euro e bitcoin, responsividade e funcionalidades CRUD.
 
 <img width="900" alt="" src="https://github.com/user-attachments/assets/aabce62f-a11f-4429-b6db-c007240522eb">
 
