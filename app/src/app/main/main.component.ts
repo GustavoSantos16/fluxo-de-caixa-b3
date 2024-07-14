@@ -59,12 +59,12 @@ export class MainComponent implements OnInit {
 
   previousMonth() {
     this.currentMonth.setMonth(this.currentMonth.getMonth() - 1);
-    this.currentMonth = new Date(this.currentMonth); // Forçar a atualização
+    this.currentMonth = new Date(this.currentMonth);
   }
 
   nextMonth() {
     this.currentMonth.setMonth(this.currentMonth.getMonth() + 1);
-    this.currentMonth = new Date(this.currentMonth); // Forçar a atualização
+    this.currentMonth = new Date(this.currentMonth);
   }
 
   addTransaction() {
